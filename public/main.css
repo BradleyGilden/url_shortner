@@ -26,10 +26,6 @@ h1 {
   margin: 0.6rem 0px;
 }
 
-#urlform div p {
-  font-size: large;
-}
-
 #urlraw {
   outline: none;
   margin-left: 0.5rem;
@@ -40,12 +36,34 @@ h1 {
 }
 
 #urlraw:focus{
-  border: 2px solid rgb(169, 11, 248);;
-  box-shadow: 0px 0px 10px rgb(169, 11, 248);;
+  border: 2px solid rgb(169, 11, 248);
+  box-shadow: 0px 0px 10px rgb(169, 11, 248);
 }
 
 #urlraw-label {
   font-size: large;
+}
+
+#copy {
+  background-color: rgba(127, 40, 199, 0.367);
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+  border-width: 0px;
+  border-radius: 20px;
+  font-size: larger;
+  padding: 0.3rem 1rem;
+  transition: all 0.1s ease;
+  margin-left: 1rem;
+}
+
+#copy:hover {
+  background-color: rgb(169, 11, 248);
+}
+
+#urlform div p {
+  font-size: large;
+  display: inline-block;
 }
 
 #slider-label {
@@ -135,10 +153,49 @@ h1 {
   padding: 0.3rem 1rem;
   border-radius: 20px;
   font-weight: 700;
-  transition: all 0.1s ease-in;
+  transition: all 0.1s ease;
 }
 
 #sbutton:hover {
   color: whitesmoke;
   background-color: rgb(169, 11, 248);;
+}
+
+@media screen and (width < 750px) {
+  #urlform div p, #copy, #urlraw, #urlraw-label, #sbutton,
+  #slider-label {
+    font-size: small
+  }
+  #time {
+    font-size: medium;
+  }
+
+  #slider {
+    padding-inline: 0.5rem;
+  }
+
+  #slider::-webkit-slider-runnable-track {
+    height: 0.2rem;
+    background-color: white;
+  }
+  
+   /* Track: Mozilla Firefox */
+  #slider::-moz-range-track {
+    height: 0.2rem;
+    background-color: white;
+  }
+  
+  #slider::-webkit-slider-thumb {
+    height: 1rem;
+    margin-top: -0.4rem ;
+    width: 1rem;
+  }
+  
+  #slider::-moz-range-thumb {
+    height: 1rem;
+    margin-top: -0.4rem ;
+    width: 1rem;
+  }
+  
+  
 }
