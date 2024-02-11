@@ -86,7 +86,7 @@ h1 {
 
 #slider {
   padding-inline: 1rem;
-  background-color: rgb(169, 11, 248);
+  background-color: rgba(127, 40, 199, 0.367);
   height: 100%;
   flex-grow: 1;
   -webkit-appearance: none;
@@ -103,7 +103,7 @@ h1 {
   width: 2rem;
   font-weight: 700;
   font-size: larger;
-  background-color: rgb(169, 11, 248);
+  background-color: rgba(127, 40, 199, 0.367);
   color: white;
   border-top-right-radius: 9999px;
   border-bottom-right-radius: 9999px;
@@ -158,7 +158,7 @@ h1 {
 
 #sbutton:hover {
   color: whitesmoke;
-  background-color: rgb(169, 11, 248);;
+  background-color: rgb(169, 11, 248);
 }
 
 @media screen and (width < 750px) {

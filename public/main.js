@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   slider.addEventListener("input", () => {
     time.textContent = slider.value;
+    const progress = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+    // Update slider appearance based on progress
+    slider.style.background = `linear-gradient(to right, rgb(169, 11, 248) ${progress}%, rgba(127, 40, 199, 0.367) ${progress}%)`;
+    if (slider.value === slider.max) {
+      time.style.backgroundColor = "rgb(169, 11, 248)"
+    } else {
+      time.style.backgroundColor = "rgba(127, 40, 199, 0.367)"
+    }
   })
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
