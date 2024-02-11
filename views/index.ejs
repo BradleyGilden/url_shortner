@@ -17,8 +17,21 @@
   <div>
     <h1>URL Shortener</h1>
     <form id="urlform">
-      <label for="urlraw" id="urlraw-label">Enter Url</label>
-      <input type="text" id="urlraw" name="urlraw" placeholder="Enter URL">
+      <div>
+        <label for="urlraw" id="urlraw-label">Enter Url</label>
+        <input type="text" id="urlraw" name="urlraw" placeholder="Enter URL" required>
+      </div>
+      <div>
+        <p>https://<%=host%>/shorten/<span id="rid">&#x3c;rid&#x3e;</span></p>
+      </div>
+      <!-- set expiraton date in minutes -->
+      <div id="slider-container">
+        <label for="slider" id="slider-label">Expiration (mins):</label>
+        <div id="slider-inner">
+          <input type="range" id="slider" name="expiration" min="5" max="30" value="1" step="5">
+          <span id="time">5</span>
+        </div>
+      </div>
       <button id="sbutton" type="submit">Shorten!</button>
     </form>
   </div>

@@ -1,20 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("#urlform");
+  const slider = document.querySelector("#slider")
+  const time = document.querySelector("#time");
+  const rid = document.querySelector("#rid");
 
-  form.addEventListener("submit", (e) => {
+  slider.addEventListener("input", () => {
+    time.textContent = slider.value;
+  })
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
     // get form data
     const data = new URLSearchParams(new FormData(form));
-
-    fetch("/shorten", {
+    const res = await fetch("/shorten", {
       method: 'POST',
       body: data,
-    }).then((res) => {
-      if (res.ok) {
-        console.log("success");
-      } else {
-        console.log(res.status, res.body)
-      }
     })
+
+    if (res.ok) {
+      rid.textContent = await res.text()
+    } else {
+      alert(await res.text())
+    }
   })
 })

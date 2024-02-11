@@ -22,6 +22,14 @@ h1 {
   text-align: center;
 }
 
+#urlform div {
+  margin: 0.6rem 0px;
+}
+
+#urlform div p {
+  font-size: large;
+}
+
 #urlraw {
   outline: none;
   margin-left: 0.5rem;
@@ -32,13 +40,89 @@ h1 {
 }
 
 #urlraw:focus{
-  border: 2px solid green;
-  box-shadow: 0px 0px 10px green;
+  border: 2px solid rgb(169, 11, 248);;
+  box-shadow: 0px 0px 10px rgb(169, 11, 248);;
 }
 
 #urlraw-label {
   font-size: large;
 }
+
+#slider-label {
+  font-size: large;
+}
+
+#slider-container {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  height: 2rem;
+  align-items: center;
+}
+
+#slider-inner {
+  flex-grow: 1;
+  display: flex;
+  height: 100%;
+}
+
+#slider {
+  padding-inline: 1rem;
+  background-color: rgb(169, 11, 248);
+  height: 100%;
+  flex-grow: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  cursor: pointer;
+  outline: none;
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+
+#time {
+  line-height: 2rem;
+  width: 2rem;
+  font-weight: 700;
+  font-size: larger;
+  background-color: rgb(169, 11, 248);
+  color: white;
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+}
+
+#slider::-webkit-slider-runnable-track {
+  height: 0.4rem;
+  background-color: white;
+}
+
+ /* Track: Mozilla Firefox */
+#slider::-moz-range-track {
+  height: 0.4rem;
+  background-color: white;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: white;
+  color: white;
+  height: 1.5rem;
+  margin-top: -0.55rem ;
+  width: 1.5rem;
+  border-radius: 9999px;
+}
+
+#slider::-moz-range-thumb {
+  background-color: white;
+  color: white;
+  height: 1.5rem;
+  margin-top: -0.55rem ;
+  width: 1.5rem;
+  border-radius: 9999px;
+}
+
+
 
 #sbutton {
   cursor: pointer;
@@ -47,7 +131,7 @@ h1 {
   background-color: white;
   color: #100c71;
   font-size: larger;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   padding: 0.3rem 1rem;
   border-radius: 20px;
   font-weight: 700;
@@ -56,5 +140,5 @@ h1 {
 
 #sbutton:hover {
   color: whitesmoke;
-  background-color: green;
+  background-color: rgb(169, 11, 248);;
 }
