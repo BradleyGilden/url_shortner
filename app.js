@@ -13,6 +13,12 @@ app.get('/', (req, res) => {
   res.status(200).render('index')
 })
 
+app.post('/shorten', (req, res) => {
+  const { urlraw } = req.body
+
+  res.sendStatus(200);
+})
+
 app.listen(3000, () => {
   console.log("server listening on port 3000...")
 })

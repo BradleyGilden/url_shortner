@@ -51,10 +51,10 @@ h1 {
   padding: 0.3rem 1rem;
   border-radius: 20px;
   font-weight: 700;
-  transition: all 0.3s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 #sbutton:hover {
   color: whitesmoke;
-  background-color: rgb(85, 85, 85);
+  background-color: green;
 }
