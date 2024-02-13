@@ -1,7 +1,6 @@
 const express = require('express');
 const { createClient } = require('redis');
 const ShortUniqueId = require('short-unique-id')
-require('dotenv').config()
 
 const app = express();
 
